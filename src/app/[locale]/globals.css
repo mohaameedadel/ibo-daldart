@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ====== Tailwind CSS Normalization ====== */
+
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  @apply box-border;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  @apply m-0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  @apply p-0;
+}
+
+/* Set default font and color */
+body {
+  @apply bg-white text-gray-900 antialiased leading-relaxed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  @apply list-none;
+}
+
+/* Smooth scrolling */
+html {
+  @apply scroll-smooth;
+}
+
+/* Responsive Images */
+img,
+picture {
+  @apply max-w-full h-auto;
+}
+
+/* Remove anchor underline */
+a {
+  @apply no-underline text-inherit;
+}
+
+/* Form Elements */
+input,
+button,
+textarea,
+select {
+  @apply text-inherit;
+}
+
+/* Button Styling Reset */
+button {
+  @apply cursor-pointer;
+}
+
+/* Remove default table spacing */
+table {
+  @apply border-collapse border-spacing-0;
+}
+
+/* Normalize headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold leading-tight;
+}
+
+/* Default focus ring for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-teal-500;
+}
